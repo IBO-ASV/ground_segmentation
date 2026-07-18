@@ -3,6 +3,8 @@ project(ground_segmentation
         VERSION 1.0
         DESCRIPTION "Ground segmentation in pointcloud")
 
+find_package(ament_cmake REQUIRED)
+
 set(CMAKE_BUILD_TYPE "RELEASE")
 
 option(BUILD_DOCS_ONLY "Build documentation only" OFF)
@@ -26,3 +28,5 @@ if(DOXYGEN_FOUND)
         COMMENT "Generating API documentation with Doxygen"
     )
 endif()
+
+ament_package()
